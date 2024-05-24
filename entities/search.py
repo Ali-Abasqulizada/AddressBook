@@ -19,7 +19,7 @@ class Search(Person, SeachHistory):
                 self.people = conn.cursor.fetchall()
                 self.add_search_history(name, address_book_name, address_book_id)
             else:
-                return {}
+                return {}, None
         for i in range(len(self.people)):
             print(self.show_person(self.people[i]["Name"], self.people[i]["Surname"], self.people[i]["Number"], self.people[i]["Country"], i + 1, self.people[i]["Is_blocked"], address_book_name))
         if __name__ != "__main__":
