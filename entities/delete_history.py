@@ -22,7 +22,7 @@ class DeleteHistory(Person):
             surname = info[1].strip()
             numbers = info[2].strip()
             countries = info[3].strip()
-            is_blocked = True if info[4].strip() == "True" else False
+            is_blocked = True if info[4].strip() == "True" or info[4].strip() == "1" else False
             address_book_name = info[5].strip()
             print(self.show_person(name, surname, numbers, countries, i + 1, is_blocked, address_book_name))
         return self.dhistory

@@ -37,7 +37,7 @@ class Delete(DeleteHistory):
         surname = info[1].strip()
         numbers = info[2].strip()
         countries = info[3].strip()
-        is_blocked = 1 if info[4].strip() == "True" else 0
+        is_blocked = 1 if info[4].strip() == "True" or info[4].strip() == "1" else 0
         try:
             sql1 = "insert into People (Name, Surname, Number, Country, Is_blocked, address_book) values(%s, %s, %s, %s, %s, %s)"
             sql2 = f"delete from `delete` where Id = {deletedPeople[int(ans) - 1]["Id"]}"
