@@ -7,9 +7,10 @@
 5. source database/main.sql;
 6. Change password that is in helpers/connect.py.
 7. Install dependencies: pip install -r requirements.
-8. Run app.py file.
-9. Note(If you want to run setup file you need to write below command in the terminal.)
-10. pip install -e .
+Note: You will only need mysql-connector: pip install --upgrade mysql-connector-python
+9. Run app.py file.
+10. Note(If you want to run setup file you need to write below command in the terminal.)
+11. pip install -e .
 # Project Structure
 1. entities folder contains modules that describe entities and their fields.
 2. helpers folder contains helper modules like connect.py(used for to connect database) etc.
